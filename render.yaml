@@ -4,7 +4,6 @@
 services:
   - name: laravel-web-app # Nombre de tu servicio web
     type: web # Es un servicio web
-    env: php # El entorno es PHP
     buildCommand: composer install # Comando para instalar dependencias
     startCommand: php artisan serve --host=0.0.0.0 # Comando para iniciar el servidor web de Laravel
     # Si tu aplicación necesita una clave de aplicación, añádela aquí
