@@ -1,0 +1,15 @@
+# Este es un ejemplo básico de render.yaml para una aplicación Laravel.
+# Puedes necesitar ajustarlo según las necesidades específicas de tu proyecto.
+
+services:
+  - name: laravel-web-app # Nombre de tu servicio web
+    type: web # Es un servicio web
+    env: php # El entorno es PHP
+    buildCommand: composer install # Comando para instalar dependencias
+    startCommand: php artisan serve --host=0.0.0.0 # Comando para iniciar el servidor web de Laravel
+    # Si tu aplicación necesita una clave de aplicación, añádela aquí
+    # environment:
+    #   APP_KEY: your_app_key_here
+    # O si usas variables de entorno en Render, no necesitas ponerla aquí.
+    # También necesitarás configurar otras variables como APP_DEBUG, DB_CONNECTION, etc.
+    # en la interfaz de Render.
